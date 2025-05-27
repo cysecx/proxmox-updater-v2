@@ -1,1 +1,89 @@
-paramiko
+# Proxmox Updater - Setup and Usage Guide
+
+## Important: Update your `nodes.json` file
+
+Before running the updater, you **must update the `nodes.json` file** with your own server details:
+
+- **host**: Replace with your server's IP address or hostname.
+- **username**: Replace with the SSH username for your server.
+- **key_filename**: Replace with the path to your SSH private key file that has access to your server.
+
+Example `nodes.json` entry:
+
+```json
+[
+  {
+    "host": "10.30.40.11",
+    "username": "root",
+    "key_filename": "/home/youruser/.ssh/id_rsa"
+  }
+]
+*****************************************************************************************************************
+
+# Proxmox Updater - Setup and Usage Guide
+
+## Prerequisites
+
+Before using this updater, ensure you have the following installed and configured on your local machine:
+
+- **Python 3.8 or newer** (tested with 3.10+)
+- **pip** (Python package manager)
+- **SSH key pair** for passwordless authentication to your remote servers
+- Your SSH **private key file** must be accessible and permission set to `600` (e.g., `chmod 600 ~/.ssh/id_rsa`)
+- Remote servers must have your SSH **public key** added to `~/.ssh/authorized_keys`
+- Access to the remote servers with sudo privileges to run system updates
+
+******************************************************************************************************************
+
+## Dependencies
+
+The Python script requires these packages:
+
+- `paramiko` (for SSH connections)
+- `cryptography` (dependency of paramiko)
+
+All dependencies are listed in `requirements.txt` and can be installed by:
+
+```bash
+pip install -r requirements.txt
+
+******************************************************************************************************************
+
+INSTALLATION:
+
+1. Clone the repository:
+
+git clone https://github.com/cysecx/proxmox-updater-v2.git
+cd proxmox-updater-v2
+
+2. (Optional) Create and activate a Python virtual environment:
+
+python3 -m venv venv
+source venv/bin/activate
+
+3. Install required Python dependencies:
+
+pip install -r requirements.txt
+
+*******************************************************************************************************************
+Running the updater
+
+Run the script with:
+
+python updater.py
+
+The updater will connect to each node in your nodes.json, run system update commands, and write logs to update_log.txt.
+*******************************************************************************************************************
+
+LOGS
+
+cat update_log.txt
+*******************************************************************************************************************
+
+If you run into permission or SSH authentication issues, verify:
+
+Your SSH key file permissions (chmod 600 ~/.ssh/id_rsa)
+
+Your SSH key is added to the remote server's ~/.ssh/authorized_keys
+
+The username and host are correct in nodes.json
