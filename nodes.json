@@ -2,16 +2,16 @@
     {
         "host": "10.30.40.11",
         "username": "root",
-        "key_filename": "/home/chris/.ssh/id_rsa"
+        "key_filename": "/home/chris/.ssh/id_rsa_new"
     },
     {
         "host": "10.30.40.7",
         "username": "root",
-        "key_filename": "/home/chris/.ssh/id_rsa"
+        "key_filename": "/home/chris/.ssh/id_rsa_new"
     },
     {
         "host": "10.30.40.8",
         "username": "root",
-        "key_filename": "/home/chris/.ssh/id_rsa"
+        "key_filename": "/home/chris/.ssh/id_rsa_new"
     }
 ]

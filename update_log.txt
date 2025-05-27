@@ -1,0 +1,131 @@
+
+=== Update Run: 2025-05-27 11:16:24 ===
+
+--- Connecting to 10.30.40.11 ---
+[FAILED to connect to 10.30.40.11]: q must be exactly 160, 224, or 256 bits long
+
+--- Connecting to 10.30.40.7 ---
+[FAILED to connect to 10.30.40.7]: q must be exactly 160, 224, or 256 bits long
+
+--- Connecting to 10.30.40.8 ---
+[FAILED to connect to 10.30.40.8]: q must be exactly 160, 224, or 256 bits long
+
+=== Update Run: 2025-05-27 11:24:08 ===
+
+--- Connecting to 10.30.40.11 ---
+[FAILED to connect to 10.30.40.11]: q must be exactly 160, 224, or 256 bits long
+
+--- Connecting to 10.30.40.7 ---
+[FAILED to connect to 10.30.40.7]: q must be exactly 160, 224, or 256 bits long
+
+--- Connecting to 10.30.40.8 ---
+[FAILED to connect to 10.30.40.8]: q must be exactly 160, 224, or 256 bits long
+
+=== Update Run: 2025-05-27 11:29:56 ===
+
+--- Connecting to 10.30.40.11 ---
+[FAILED to connect to 10.30.40.11]: Authentication failed.
+
+--- Connecting to 10.30.40.7 ---
+[FAILED to connect to 10.30.40.7]: Authentication failed.
+
+--- Connecting to 10.30.40.8 ---
+[FAILED to connect to 10.30.40.8]: Authentication failed.
+
+=== Update Run: 2025-05-27 11:33:14 ===
+
+--- Connecting to 10.30.40.11 ---
+[FAILED to connect to 10.30.40.11]: Authentication failed.
+
+--- Connecting to 10.30.40.7 ---
+[FAILED to connect to 10.30.40.7]: Authentication failed.
+
+--- Connecting to 10.30.40.8 ---
+[FAILED to connect to 10.30.40.8]: Authentication failed.
+
+=== Update Run: 2025-05-27 11:35:05 ===
+
+--- Connecting to 10.30.40.11 ---
+[FAILED to connect to 10.30.40.11]: Authentication failed.
+
+--- Connecting to 10.30.40.7 ---
+[FAILED to connect to 10.30.40.7]: Authentication failed.
+
+--- Connecting to 10.30.40.8 ---
+[FAILED to connect to 10.30.40.8]: Authentication failed.
+
+=== Update Run: 2025-05-27 11:37:19 ===
+
+--- Connecting to 10.30.40.11 ---
+[FAILED to connect to 10.30.40.11]: Authentication failed.
+
+--- Connecting to 10.30.40.7 ---
+[FAILED to connect to 10.30.40.7]: Authentication failed.
+
+--- Connecting to 10.30.40.8 ---
+[FAILED to connect to 10.30.40.8]: Authentication failed.
+
+=== Update Run: 2025-05-27 11:43:44 ===
+
+--- Connecting to 10.30.40.11 ---
+
+Running: DEBIAN_FRONTEND=noninteractive apt-get update -y
+Get:1 http://security.debian.org bookworm-security InRelease [48.0 kB]
+Hit:2 http://ftp.us.debian.org/debian bookworm InRelease
+Get:3 http://ftp.us.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:4 http://download.proxmox.com/debian/pve bookworm InRelease [2,768 B]
+Hit:5 http://download.proxmox.com/debian/ceph-squid bookworm InRelease
+Fetched 106 kB in 1s (189 kB/s)
+Reading package lists...
+
+Running: DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following package was automatically installed and is no longer required:
+  proxmox-kernel-6.8.12-8-pve-signed
+Use 'apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+--- Connecting to 10.30.40.7 ---
+
+Running: DEBIAN_FRONTEND=noninteractive apt-get update -y
+Get:1 http://security.debian.org bookworm-security InRelease [48.0 kB]
+Get:2 http://download.proxmox.com/debian/pve bookworm InRelease [2,768 B]
+Hit:3 http://download.proxmox.com/debian/ceph-squid bookworm InRelease
+Hit:4 http://ftp.us.debian.org/debian bookworm InRelease
+Get:5 http://ftp.us.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Fetched 106 kB in 1s (107 kB/s)
+Reading package lists...
+
+Running: DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following package was automatically installed and is no longer required:
+  proxmox-kernel-6.8.12-8-pve-signed
+Use 'apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+--- Connecting to 10.30.40.8 ---
+
+Running: DEBIAN_FRONTEND=noninteractive apt-get update -y
+Get:1 http://security.debian.org bookworm-security InRelease [48.0 kB]
+Hit:2 http://ftp.us.debian.org/debian bookworm InRelease
+Get:3 http://download.proxmox.com/debian/pve bookworm InRelease [2,768 B]
+Get:4 http://ftp.us.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Hit:5 http://download.proxmox.com/debian/ceph-squid bookworm InRelease
+Fetched 106 kB in 1s (200 kB/s)
+Reading package lists...
+
+Running: DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following package was automatically installed and is no longer required:
+  proxmox-headers-6.8.12-9-pve
+Use 'apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.

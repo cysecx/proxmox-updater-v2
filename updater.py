@@ -1,4 +1,5 @@
 import paramiko
+from paramiko import RSAKey
 import json
 from datetime import datetime
 from pathlib import Path
@@ -20,10 +21,13 @@ def update_node(node, log_file):
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     try:
+        # Explicitly load the RSA private key from file
+        private_key = RSAKey.from_private_key_file(node["key_filename"])
+
         client.connect(
             hostname=node["host"],
             username=node["username"],
-            key_filename=node["key_filename"]
+            pkey=private_key
         )
 
         commands = [
